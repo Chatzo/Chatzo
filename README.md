@@ -3,7 +3,7 @@ I have a bachelor degree in Game Design from Uppsala University.
 
 🔭 I’m currently working on improving my skills in C#/.Net, HTML, CSS and Javacript
 
-🌱 I'm planning to add smaller projects here as I go. Everything from smaller things to more advances things like:
+🌱 I'm planning to add smaller projects here as I go. Maybe things like:
 - Design patterns (Command pattern, Observer pattern etc)
 - Path finding algorithms like A* pathfinding or something similar
 - Boids algorithm
