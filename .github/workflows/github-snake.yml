@@ -2,7 +2,7 @@ name: GitHub Snake
 
 on:
   push:
-    branches: [ main ]  # or your main branch
+    branches: [ main ]
 
 jobs:
   snake:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # allow authenticated push
 
       - name: Generate GitHub Snake SVGs
         uses: Platane/snk@v3
@@ -27,7 +29,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git add dist/
           git commit -m "Add generated GitHub snake SVGs" || echo "No changes to commit"
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push
 
